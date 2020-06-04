@@ -12,9 +12,7 @@ def get_temp(sense):
     t1 = sense.get_temperature_from_humidity()
     t2 = sense.get_temperature_from_pressure()
     t = (t1 + t2) / 2
-    t_cpu = get_cpu_temp()
-    t_corr = t - ((t_cpu - t) / 1.5)
-    return t_corr
+    return t
 
 sense = SenseHat()
 
